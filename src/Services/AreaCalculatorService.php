@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace Thiiagoms\OCP\Services;
 
+use Thiiagoms\OCP\Contracts\ShapeableContract;
+
 class AreaCalculatorService
 {
-    public function calculate($shape): float
+    public function calculate(ShapeableContract $shape): float
     {
-        if ($shape instanceof Triangle) {
-            return ($shape->width * $shape->height) / 2;
-        }
-
-        return $shape->width * $shape->height;
+        return $shape->area();
     }
 }

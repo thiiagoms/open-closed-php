@@ -5,19 +5,16 @@ declare(strict_types=1);
 namespace Thiiagoms\OCP\Services;
 
 use Exception;
+use Thiiagoms\OCP\Contracts\ShapeableContract;
 
-class Square
+class Square implements ShapeableContract
 {
     public function __construct(private float $height, private float $width)
     {
     }
 
-    public function __get(string $property): float
+    public function area(): float
     {
-        if (property_exists($this, $property)) {
-            return $this->{$property};
-        }
-
-        throw new Exception("Property {$property} not found");
+        return $this->width * $this->height;
     }
 }
