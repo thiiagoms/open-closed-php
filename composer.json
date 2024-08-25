@@ -1,0 +1,15 @@
+{
+    "name": "thiiagoms/ocp-php",
+    "description": "Open Closed Principle (OCP) in PHP for Composer Packages:",
+    "autoload": {
+        "psr-4": {
+            "Thiiagoms\\OCP\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thiiagoms",
+            "email": "thiagom.devsec@gmail.com"
+        }
+    ]
+}
